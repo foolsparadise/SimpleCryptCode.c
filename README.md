@@ -1,4 +1,4 @@
-# SimpleEntryCode.c  
+# SimpleCryptCode.c  
 ## 说明 Readme  
 ```
 C语言的简单的加解密  
@@ -8,7 +8,7 @@ https://blog.csdn.net/Ibelievesunshine/article/details/80056903
 ```
 #### 函数block
 ```
-char *Entry_Array[] = { "Login", "Password"};
+char *Crypt_Array[] = { "Login", "Password"};
 
 //函数encode()将字母顺序推后n位，实现文件加密功能
 char *encode(char *str){
@@ -69,11 +69,11 @@ char const *decode(char *str){
 	return str;
 }//该函数代码有冗余，读者可改进
 //定义查找方法
-int Is_Entryed(char *value/*查到的值*/){
-	int count = sizeof(Entry_Array)/sizeof(0);
+int Is_Crypted(char *value/*查到的值*/){
+	int count = sizeof(Crypt_Array)/sizeof(0);
 	int i=0;
     for(i=0;i<count;i++){//循环数组中的每一个元素
-        if(0==strncmp(value,Entry_Array[i],strlen(value))){//判断该元素是否是查找的值
+        if(0==strncmp(value,Crypt_Array[i],strlen(value))){//判断该元素是否是查找的值
             return i;//已找到，返回找到该值在数组中的索引
         }
     }
@@ -84,7 +84,7 @@ int Is_Entryed(char *value/*查到的值*/){
 #### 使用
 ```
 char *key
-if(Is_Entryed(key)>=0) { 
+if(Is_Crypted(key)>=0) { 
 				//在名单里
 				//encode(value)或decode(value);       
 			}
