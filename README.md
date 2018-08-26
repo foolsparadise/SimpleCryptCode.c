@@ -1,7 +1,7 @@
 # SimpleCryptCode.c  
 ## 说明 Readme  
 ```
-C语言的简单的加解密  
+C语言字符串的简单的加解密  
 参考来源：  
 https://blog.csdn.net/Ibelievesunshine/article/details/80056903  
 在原基础上有改动，添加搜索判断处理key，进行区分对待  
